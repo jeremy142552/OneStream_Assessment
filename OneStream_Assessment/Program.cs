@@ -1,4 +1,6 @@
 
+using OneStream_Assessment_Services.FrontEndService;
+
 namespace OneStream_Assessment
 {
     public class Program
@@ -14,6 +16,14 @@ namespace OneStream_Assessment
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
+            // Add HttpContextAccessor
+            builder.Services.AddHttpContextAccessor();
+
+            // Explicitly add HttpClient and IHttpClientFactory
+            builder.Services.AddHttpClient();
+
+            // Register FrontEndService
+            builder.Services.AddScoped<IFrontEndService, FrontEndService>();
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
