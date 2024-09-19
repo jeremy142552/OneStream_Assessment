@@ -1,0 +1,55 @@
+﻿@page "/apiresults"
+@using OneStream_Assessment_Services.FrontEndService
+@inject IFrontEndService FrontEndService
+
+<h2>Front End API Demo</h2>
+
+<div>
+    <h4>GET Requests</h4>
+    <button class="btn btn-primary" @onclick="CallApi1">Call API 1</button>
+    <button class="btn btn-secondary" @onclick="CallApi2">Call API 2</button>
+</div>
+
+<div class="mt-3">
+    <h4>POST Requests</h4>
+    <input @bind="postData" placeholder="Enter data to post" />
+    <button class="btn btn-primary" @onclick="PostToApi1">Post to API 1</button>
+    <button class="btn btn-secondary" @onclick="PostToApi2">Post to API 2</button>
+</div>
+
+@if (!string.IsNullOrEmpty(result))
+{
+    <div class="mt-3">
+        <h3>Result:</h3>
+        <pre>@result</pre>
+    </div>
+}
+
+@code {
+    private string result = "";
+    private string postData = "";
+
+    private async Task CallApi1()
+    {
+        result = await FrontEndService.CallApi1();
+        StateHasChanged();
+    }
+
+    private async Task CallApi2()
+    {
+        result = await FrontEndService.CallApi2();
+        StateHasChanged();
+    }
+
+    private async Task PostToApi1()
+    {
+        result = await FrontEndService.PostToApi1(postData);
+        StateHasChanged();
+    }
+
+    private async Task PostToApi2()
+    {
+        result = await FrontEndService.PostToApi2(postData);
+        StateHasChanged();
+    }
+}
