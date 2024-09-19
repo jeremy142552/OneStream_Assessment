@@ -2,7 +2,7 @@ using System.Net;
 using Microsoft.AspNetCore.Http;
 using Moq;
 using Moq.Protected;
-using OneStream_Assessment_Services.FrontEndService;
+using OneStream_Assessment_Services.FrontEnd;
 
 namespace OneStream_Assessment_Tests
 {

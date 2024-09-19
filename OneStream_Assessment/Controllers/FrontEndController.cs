@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using OneStream_Assessment_Services.FrontEndService;
+using OneStream_Assessment_Services.FrontEnd;
 
-namespace OneStream_Assessment.Controllers
+namespace OneStream_Assessment_WebApi.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -48,6 +48,6 @@ namespace OneStream_Assessment.Controllers
             return Ok(result);
         }
 
-       
+
     }
 }

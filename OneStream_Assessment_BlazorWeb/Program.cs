@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Components.Web;
 using OneStream_Assessment_BlazorWeb.Components;
-using OneStream_Assessment_Services.FrontEndService;
+using OneStream_Assessment_Services.FrontEnd;
 
 namespace OneStream_Assessment_BlazorWeb
 {

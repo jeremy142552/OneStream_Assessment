@@ -1,4 +1,4 @@
-﻿namespace OneStream_Assessment_Services.FrontEndService
+﻿namespace OneStream_Assessment_Services.FrontEnd
 {
     public interface IFrontEndService
     {

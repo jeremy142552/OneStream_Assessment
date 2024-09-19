@@ -3,7 +3,7 @@ using System.Net.Http.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace OneStream_Assessment_Services.FrontEndService
+namespace OneStream_Assessment_Services.FrontEnd
 {
     public class FrontEndService : IFrontEndService
     {

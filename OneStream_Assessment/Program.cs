@@ -1,7 +1,6 @@
+using OneStream_Assessment_Services.FrontEnd;
 
-using OneStream_Assessment_Services.FrontEndService;
-
-namespace OneStream_Assessment
+namespace OneStream_Assessment_WebApi
 {
     public class Program
     {
